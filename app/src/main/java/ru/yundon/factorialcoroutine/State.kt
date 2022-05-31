@@ -1,7 +1,11 @@
 package ru.yundon.factorialcoroutine
 
-class State (
-    val isError: Boolean = false,
-    val isInProgress: Boolean = false,
-    val factorial: String = ""
-)
+//класс для отображения состояния экрана
+sealed class State
+
+//отображеат состояние ошибки
+object Error : State()
+//отображает состяние пргресса
+object Progress : State()
+//отображает состояние результата (ответ по фкториалу)
+class Result(val factorial: String) : State()
