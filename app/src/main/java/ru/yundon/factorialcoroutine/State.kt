@@ -8,4 +8,4 @@ object Error : State()
 //отображает состяние пргресса
 object Progress : State()
 //отображает состояние результата (ответ по фкториалу)
-class Result(val factorial: String) : State()
+class FactorialResult(val value: String) : State()
