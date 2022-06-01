@@ -47,8 +47,8 @@ class MainActivity : AppCompatActivity() {
                     binding.progressBar.visibility = View.VISIBLE
                     binding.button.isEnabled = false
                 }
-                is Result ->{
-                    binding.textView.text = it.factorial
+                is FactorialResult ->{
+                    binding.textView.text = it.value
                 }
             }
         }
